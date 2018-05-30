@@ -68,7 +68,7 @@ void SimulateData(){
 				cashier1.erase(cashier1.begin() + i);
 				People_Leave_1++;//int that indicate how many customer have left before being served
 			}
-		}//the function will check all the customer by iterating them on by one and if the witing time the customer have is bigger than the timepass then that element will be removed regardless of position
+		}///this function will check the customer waiting time by directly accessing the element.
 		for(int i =0;i<cashier2.size();i++){
 			if( timepass >cashier2[i]){
 				cashier2.erase(cashier2.begin() + i);
@@ -99,14 +99,16 @@ void SimulateData(){
 				People_Leave_3++;
 			}
 		}
+		
+		cout<<"TimePass"<<timepass<<endl;
 		cout<<" --------------\n";
         cout<<"|With 1 Cashier|\n";
         cout<<" --------------\n";
         cout<<"\n";
 		cout<<"Cashier_1:";
 		for (int i =0; i < cashier1.size(); i++){
-//            cout<<"["<<cashier1[i]<<"]";(to check the element that each customer have)(for testing purposes)
-            cout<<"[]";
+            cout<<"["<<cashier1[i]<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
 		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<" --------------\n";
@@ -165,6 +167,7 @@ void SimulateData(){
 		}//to remove the customer that have already being served
 		
 		Sleep(1000);//to initiate waiting time
+//		Sleep(3000);for testing purpose
 		system("cls");//to clear the screen
 	
 		cout<<endl;
@@ -263,4 +266,3 @@ void Menu(){
     }
     system("cls");
 }
-
